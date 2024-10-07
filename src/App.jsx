@@ -1,4 +1,7 @@
 import ResistorCalculator from './Components/ResistorCalculator'
+import Banner from './Components/Banner'
+import FormPizza from './Components/FormPizza'
+import Pedidos from './Components/Pedidos'
 import './App.css'
 
 function App() {
