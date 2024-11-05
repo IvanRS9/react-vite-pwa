@@ -9,8 +9,9 @@ function App() {
   return (
     <>
       <div className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold text-center">Calculadora de Resistores</h1>
-        <ResistorCalculator />
+        {/* <h1 className="text-4xl font-bold text-center">Calculadora de Resistores</h1> */}
+        {/* <ResistorCalculator /> */}
+        
       </div>
     </>
   )
