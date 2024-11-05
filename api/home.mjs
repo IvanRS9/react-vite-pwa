@@ -1,3 +1,3 @@
 export async function GET() {
-    return JSON.stringify("ok");
+    return new Response(JSON.stringify("ok"))
 }
