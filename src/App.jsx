@@ -4,18 +4,22 @@ import FormPizza from './Components/FormPizza'
 import Pedidos from './Components/Pedidos'
 import './App.css'
 import Productos from './Components/Productos'
+import Busqueda from './Components/Busqueda'
+import Item from './Components/Item'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <>
-      <div className="container mx-auto p-4">
-        {/* <h1 className="text-4xl font-bold text-center">Calculadora de Resistores</h1> */}
-        {/* <ResistorCalculator /> */}
-        <Productos />
-      </div>
-    </>
-  )
+    <Router>
+        <Routes>
+            <Route path="/" element={<Busqueda />} />
+            <Route path="/productos" element={<Productos />} />
+            <Route path="/producto/:id" element={<Item />} />
+        </Routes>
+    </Router>
+);
 }
 
 export default App
