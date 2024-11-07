@@ -34,18 +34,18 @@ const Busqueda = () => {
 
             const result = await response.json();
 
-            // Redirige a `Ventas` pasando los resultados en el estado
             console.log(result);
-            // navigate('/ventas', { state: { sales: result } });
+            navigate('/ventas', { state: { sales: result } });
         } catch (error) {
             console.error("Error fetching data:", error);
+            navigate('/');
         }
     };
 
     return (
         <div>
             <div className="container">
-                <img src="src/assets/shop-bag.svg" alt="Logo" className="w-24" />
+                <img src="src/assets/shop-bag.svg" alt="Logo" style={{cursor: "pointer"}} className="w-24" onClick={handleSales} />
                 <br />
                 <h1>Bazar Universal</h1>
                 <br />
@@ -55,8 +55,6 @@ const Busqueda = () => {
                     <br /><br />
                     <button type="submit" className="search-button">Buscar</button>
                 </form>
-
-                <button onClick={handleSales}>Sales</button>
             </div>
         </div>
     );

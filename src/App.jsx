@@ -6,6 +6,7 @@ import './App.css'
 import Productos from './Components/Productos'
 import Busqueda from './Components/Busqueda'
 import Item from './Components/Item'
+import Ventas from './Components/Ventas'
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Busqueda />} />
             <Route path="/productos" element={<Productos />} />
             <Route path="/producto/:id" element={<Item />} />
+            <Route path='/ventas' element={<Ventas />}/>
         </Routes>
     </Router>
 );

@@ -11,8 +11,30 @@ const Productos = () => {
         navigate(`/producto/${id}`);
     };
 
+    const handleSales = async () => {
+        try {
+            const response = await fetch('https://exous.wsmprastreo.com.mx/api/v1/sales', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const result = await response.json();
+
+            console.log(result);
+            navigate('/ventas', { state: { sales: result } });
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            navigate('/');
+        }
+    };
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div className='container'>
+                <img src="src/assets/shop-bag.svg" alt="Logo" style={{ cursor: "pointer" }} className="w-24" onClick={handleSales} />
+            </div>
             <div>
                 <h1 style={{ margin: '0', fontSize: '2rem', color: '#fff' }}>Productos</h1>
                 <br />
