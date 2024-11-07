@@ -23,6 +23,25 @@ const Busqueda = () => {
         }
     };
 
+    const handleSales = async () => {
+        try {
+            const response = await fetch('https://exous.wsmprastreo.com.mx/api/v1/sales', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const result = await response.json();
+
+            // Redirige a `Ventas` pasando los resultados en el estado
+            console.log(result);
+            // navigate('/ventas', { state: { sales: result } });
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    };
+
     return (
         <div>
             <div className="container">
@@ -36,6 +55,8 @@ const Busqueda = () => {
                     <br /><br />
                     <button type="submit" className="search-button">Buscar</button>
                 </form>
+
+                <button onClick={handleSales}>Sales</button>
             </div>
         </div>
     );
