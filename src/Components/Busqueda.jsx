@@ -53,7 +53,7 @@ const Busqueda = () => {
                     <input type="search" className="search-input" placeholder="Buscar..." {...register("search", { required: true })} />
                     {errors.search && <span>This field is required</span>}
                     <br /><br />
-                    <button type="submit" className="search-button">Buscar</button>
+                    <button type="submit" className="search-button" style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Buscar</button>
                 </form>
             </div>
         </div>
