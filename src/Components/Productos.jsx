@@ -33,7 +33,7 @@ const Productos = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div className='container'>
-                <img src="src/assets/shop-bag.svg" alt="Logo" style={{ cursor: "pointer" }} className="w-24" onClick={handleSales} />
+                <img src="/shop-bag.svg" alt="Logo" style={{ cursor: "pointer" }} className="w-24" onClick={handleSales} />
             </div>
             <div>
                 <h1 style={{ margin: '0', fontSize: '2rem', color: '#fff' }}>Productos</h1>
@@ -63,7 +63,7 @@ const Productos = () => {
                             }}
                         >
                             <img
-                                src={`${product.thumbnail}`} onError={(e) => e.target.src = "src/assets/shop-bag.svg"}
+                                src={`${product.thumbnail}`} onError={(e) => e.target.src = "/shop-bag.svg"}
                                 alt={product.title}
                                 style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                             />

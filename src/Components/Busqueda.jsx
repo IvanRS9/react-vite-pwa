@@ -45,7 +45,7 @@ const Busqueda = () => {
     return (
         <div>
             <div className="container">
-                <img src="src/assets/shop-bag.svg" alt="Logo" style={{cursor: "pointer"}} className="w-24" onClick={handleSales} />
+                <img src="/shop-bag.svg" alt="Logo" style={{cursor: "pointer"}} className="w-24" onClick={handleSales} />
                 <br />
                 <h1>Bazar Universal</h1>
                 <br />

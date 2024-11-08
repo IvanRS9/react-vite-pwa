@@ -88,7 +88,7 @@ const Item = () => {
     return (
         <>
             <div className='container'>
-                <img src="/src/assets/shop-bag.svg" alt="Logo" style={{ cursor: "pointer" }} className="w-24" onClick={handleSales} />
+                <img src="/shop-bag.svg" alt="Logo" style={{ cursor: "pointer" }} className="w-24" onClick={handleSales} />
             </div>
             <div
                 style={{
@@ -105,21 +105,21 @@ const Item = () => {
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginBottom: '16px' }}>
                     <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#f0f0f0' }}>
                         <img
-                            src={`${product.thumbnail}`} onError={(e) => e.target.src = "/src/assets/shop-bag.svg"}
+                            src={`${product.thumbnail}`} onError={(e) => e.target.src = "/shop-bag.svg"}
                             alt={product.title}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                         />
                     </div>
                     <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#f0f0f0' }}>
                         <img
-                            src={`${product.thumbnail}`} onError={(e) => e.target.src = "/src/assets/shop-bag.svg"}
+                            src={`${product.thumbnail}`} onError={(e) => e.target.src = "/shop-bag.svg"}
                             alt={product.title}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                         />
                     </div>
                     <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#f0f0f0' }}>
                         <img
-                            src={`${product.thumbnail}`} onError={(e) => e.target.src = "/src/assets/shop-bag.svg"}
+                            src={`${product.thumbnail}`} onError={(e) => e.target.src = "/shop-bag.svg"}
                             alt={product.title}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                         />

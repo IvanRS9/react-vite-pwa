@@ -18,7 +18,7 @@ const Ventas = () => {
     return (
         <div style={{ padding: '20px' }}>
             <div className='container'>
-                <img src="src/assets/shop-bag.svg" alt="Logo" style={{ cursor: "pointer" }} className="w-24" onClick={handleHome} />
+                <img src="/shop-bag.svg" alt="Logo" style={{ cursor: "pointer" }} className="w-24" />
             </div>
             <br />
             <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Ventas Realizadas</h1>
@@ -38,7 +38,7 @@ const Ventas = () => {
                         {/* Imagen del producto vendido */}
                         <div style={{ width: '100px', height: '100px', backgroundColor: '#f0f0f0', margin: '0 auto 16px', borderRadius: '50%' }}>
                             <img
-                                src={`${sale.thumbnail}`} onError={(e) => e.target.src = "src/assets/shop-bag.svg"}
+                                src={`${sale.thumbnail}`} onError={(e) => e.target.src = "/shop-bag.svg"}
                                 alt={sale.title}
                                 style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                             />
@@ -68,6 +68,12 @@ const Ventas = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <br />
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                <button onClick={handleHome} style={{ padding: '10px 20px', fontSize: '1rem', backgroundColor: '#0070f3', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+                    Regresar
+                </button>
             </div>
         </div>
     );
